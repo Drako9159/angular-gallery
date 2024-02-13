@@ -1,0 +1,6 @@
+npm install @angular/cli
+ng new angular-gallery
+ng serve
+ng g c shared/nav
+ng g c shared/header
+ng g c shared/footer
