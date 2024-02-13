@@ -4,3 +4,10 @@ ng serve
 ng g c shared/nav
 ng g c shared/header
 ng g c shared/footer
+
+ng g c pages/gallery
+ng g c pages/contact
+ng g c pages/about-me
+ng g c pages/gallery/photo
+
+npm install bootstrap
