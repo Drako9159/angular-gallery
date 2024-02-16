@@ -20,10 +20,10 @@ img {
   transition: transform 0.25s;
   filter: grayscale(100%);
 }
-.container:hover img {
+.contenedor:hover img {
   transform: scale(1.05);
   filter: grayscale(0%);
 }
-.container {
+.contenedor {
   overflow: hidden;
 }
