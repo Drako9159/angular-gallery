@@ -11,3 +11,8 @@ ng g c pages/about-me
 ng g c pages/gallery/photo
 
 npm install bootstrap
+
+npm install json-server
+npx json-server db.json
+
+ng g s services/gallery

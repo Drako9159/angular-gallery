@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotoComponent } from './photo/photo.component';
 import { Photo } from '../../models/photo';
+import { GalleryService } from '../../services/gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -11,8 +12,18 @@ import { Photo } from '../../models/photo';
 })
 export class GalleryComponent implements OnInit {
   photoTest = new Photo();
+  photoList!: Photo[];
+
+  constructor(private galleryService: GalleryService) {}
+
   ngOnInit(): void {
     this.photoTest.url =
       'https://cdn.pixabay.com/photo/2013/07/18/10/56/railroad-163518_1280.jpg';
+    this.galleryService.getPhotos().subscribe({
+      next: (data) => {
+        this.photoList = data;
+        console.log(this.photoList);
+      },
+    });
   }
 }

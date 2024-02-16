@@ -1,7 +1,14 @@
 <div class="container-fluid">
     <div class="row">
+        @for (item of photoList; track item.id){
         <div class="col-sm-4">
-            <app-photo [photo]=photoTest></app-photo>
+            <app-photo [photo]="item"></app-photo>
         </div>
+        }
+        @empty {
+        <div class="alert alert-danger">
+            <p>Images not found</p>
+        </div>
+        }
     </div>
 </div>
